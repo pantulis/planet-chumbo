@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Planeta Málaga</title>
+	<%= stylesheet_link_tag 'style', :media => 'screen' %>
+	
+    <link rel="stylesheet" href="httpontent/themes/depo-clean/style.css" type="text/css" media="screen" />
+    <link rel="alternate" type="application/rss+xml" title="Planeta Málaga RSS Feed" href="http://feeds.feedburner.com/planetamalaga" />
+
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="top">
+        <div class="search">
+
+          <form method="get" id="sform" action="/">
+            <input type="text" id="q" value="" name="s" size="15" />
+          </form>
+        </div>
+        <!-- .search -->
+        <h1>
+	<a href="/"><img src="/images/bg_h1.png"/><span>Planeta Málaga.  Bloguerones en la Red</span></a></h1>
+      </div>
+    </div>
+
+    <!-- .header -->
+    <div class="container">
+	
+	<%= yield %>
+ 
+
+    </div>  <!-- .container -->
+
+    <div class="footer">
+      <div class="bottom">
+        <div>
+          <p><strong>Acerca de...</strong></p>
+          <p>Planeta Málaga es el agregador de blogs escritos en Málaga o por malagueños en el mundo</p>
+
+        </div>
+        <!-- acerca_de -->
+
+        <div>
+        </div>
+
+        <div>
+
+        </div>
+
+        <div>
+        </div>
+
+        <div class="last">
+        </div>
+        <!-- twitter -->
+      </div>
+      <br clear="all" />
+
+      <div class="copyright">
+
+                        <p>&copy; Planeta Málaga.</p>
+        
+<!-- End -->
+
+      </div>
+
+      <!-- .copyright -->
+    </div>
+    <!-- .footer -->
+  </body>
+</html>
+
+

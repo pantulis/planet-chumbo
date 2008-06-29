@@ -1,0 +1,17 @@
+<div class="post">
+	<div class="metainfo">
+		<p>
+			Publicado en
+			<br />
+			<%= link_to post.feed.name, post.permalink %>
+			<br />
+		</p>
+		
+		
+	</div>
+	
+	<div class="content">
+		<h2><%= link_to post.title, post.permalink %></h2>
+		<%= post.body %>
+	</div>
+</div>

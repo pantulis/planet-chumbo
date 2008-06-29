@@ -1,0 +1,15 @@
+<%= render :partial => 'post', :collection => @posts %>
+
+
+<div class="navigation">
+	
+	<div id="pagination">	
+		<%= will_paginate @posts, {
+			:prev_label => '&larr; Anteriores',
+			:next_label => '&rarr; Siguientes', 
+			:page_links => false
+		}%>
+	</div>
+
+</div>
+

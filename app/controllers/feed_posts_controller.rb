@@ -1,0 +1,2 @@
+class FeedPostsController < ApplicationController
+end
