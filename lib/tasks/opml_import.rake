@@ -1,6 +1,6 @@
 namespace :chumbo do
 
-  require 'rexml/Document'
+  require 'rexml/document'
 
 
   # parse_opml (opml_node, parent_names=[])
