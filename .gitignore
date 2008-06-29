@@ -1,1 +1,4 @@
 config/database.yml
+log/test.log
+log/development.log
+log/production.log
