@@ -13,10 +13,12 @@ namespace :chumbo do
   desc "Parse some feeds"
   task :parse => :environment do
     if ENV['LIMIT'].blank?
-      feeds = Feed.find(:all, :conditions => "published  = 't'", :order => 'updated_at ASC')
+      feeds = Feed.find(:all, :conditions => ["published  = ?", true], 
+                              :order => 'updated_at ASC')
     else 
       length = ENV['LIMIT'].to_i
-      feeds = Feed.find(:all, :conditions => "published = 't'", :order => 'updated_at ASC', :limit => length)
+      feeds = Feed.find(:all, :conditions => ["published = ?", true ], 
+                              :order => 'updated_at ASC', :limit => length)
     end
     
     feeds.each do |feed|
