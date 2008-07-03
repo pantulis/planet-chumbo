@@ -4,7 +4,7 @@ class CreateFeedPosts < ActiveRecord::Migration
       t.string :title
       t.string :authors
       t.string :categories
-      t.date :date_published
+      t.datetime :date_published
       t.text :body
       t.integer :feed_id
       t.string :permalink

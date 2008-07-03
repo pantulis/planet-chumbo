@@ -5,9 +5,8 @@
 			<br />
 			<%= link_to post.feed.name, post.permalink %>
 			<br />
+			<%= post.date_published.strftime("%d-%m-%Y %H:%M") %>
 		</p>
-		
-		
 	</div>
 	
 	<div class="content">

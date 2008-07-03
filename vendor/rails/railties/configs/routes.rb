@@ -11,7 +11,8 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products
-
+  map.resources :feeds
+  
   # Sample resource route with options:
   #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
 
@@ -24,6 +25,7 @@ ActionController::Routing::Routes.draw do |map|
   #     products.resources :sales, :collection => { :recent => :get }
   #   end
 
+
   # Sample resource route within a namespace:
   #   map.namespace :admin do |admin|
   #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
@@ -34,6 +36,7 @@ ActionController::Routing::Routes.draw do |map|
   # map.root :controller => "welcome"
 
   # See how all your routes lay out with "rake routes"
+
 
   # Install the default routes as the lowest priority.
   map.connect ':controller/:action/:id'

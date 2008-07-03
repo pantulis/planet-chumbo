@@ -5,19 +5,18 @@
     <title>Planeta Málaga</title>
 	<%= stylesheet_link_tag 'style', :media => 'screen' %>
 	
-    <link rel="stylesheet" href="httpontent/themes/depo-clean/style.css" type="text/css" media="screen" />
-    <link rel="alternate" type="application/rss+xml" title="Planeta Málaga RSS Feed" href="http://feeds.feedburner.com/planetamalaga" />
-
-
+	<%= auto_discovery_link_tag(:atom, {:controller => "front_pages", :action => "index", :format => :atom, :title => "Planeta Málaga (Atom)"}) %>
   </head>
   <body>
     <div class="header">
       <div class="top">
         <div class="search">
 
+<% if false %>
           <form method="get" id="sform" action="/">
             <input type="text" id="q" value="" name="s" size="15" />
           </form>
+<% end %>
         </div>
         <!-- .search -->
         <h1>
