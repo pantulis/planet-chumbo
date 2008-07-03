@@ -8,6 +8,7 @@ class Feed < ActiveRecord::Base
   def parse
     return unless self.published? 
     
+    
     feed = FeedNormalizer::FeedNormalizer.parse open(self.feed_url)
     feed.clean!
     feed.entries.each do |entry|
@@ -22,8 +23,7 @@ class Feed < ActiveRecord::Base
       
       self.feed_posts << post
     end
-    self.update_attributes(:name => feed.title)
-    self.save
+    self.update_attributes(:name => feed.title, :updated_at => Time.now)
   rescue
     logger.debug("Error parseando #{self.feed_url}, lo inhabilitamos")
     self.update_attributes(:published => false)

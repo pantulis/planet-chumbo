@@ -48,13 +48,4 @@ namespace :chumbo do
     end
   end
 
-  desc "Parsea todos los feeds"
-  task :parse_all => :environment do 
-    Feed.find(:all).each do |feed|
-      puts "Downloading and parsing #{feed.feed_url}"
-      
-      feed.parse
-      
-    end
-  end
 end
