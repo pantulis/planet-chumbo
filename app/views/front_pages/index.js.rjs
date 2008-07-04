@@ -1,0 +1,6 @@
+page.insert_html :bottom, :posts, :partial => 'post', :collection => @posts
+if @posts.page_count > @posts.current_page
+  page.call 'checkScroll' 
+else
+  page[:loading].hide
+end

@@ -1,15 +1,8 @@
+<%= javascript_include_tag :all %>
+<div id="posts">
 <%= render :partial => 'post', :collection => @posts %>
-
-
-<div class="navigation">
-	
-	<div id="pagination">	
-		<%= will_paginate @posts, {
-			:prev_label => '&larr; Anteriores',
-			:next_label => '&rarr; Siguientes', 
-			:page_links => false
-		}%>
-	</div>
-
 </div>
 
+<p id="loading">
+Cargando más posts... <%= image_tag('ajax-loader.gif') %>
+</p>
