@@ -1,5 +1,5 @@
 config/database.yml
+config/deploy.rb
+log
+tmp
 db/development.sqlite3
-log/test.log
-log/development.log
-log/production.log
