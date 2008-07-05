@@ -1,0 +1,472 @@
+body {
+	background-color:#FFFFFF;
+	color:#444444;
+	font-family:"Lucida Grande","Lucida Sans Unicode",Verdana,Arial,sans-serif;
+	font-size:12px;
+	margin:0px;
+	padding:0px;
+}
+
+h1, h2, h3, h4 {
+	color:#696869;
+	font-family:Georgia,"Helvetica",sans-serif;
+	font-weight:normal;
+	margin-top:0pt;
+}
+
+h1 {
+	font-size:30px;
+}
+
+h2 {
+	font-size:25px;
+	margin-bottom:2px;
+}
+
+h3 {
+	font-size:20px;
+}
+
+h4 {
+	font-size:15px;
+}
+
+a {
+	color:#006323;
+}
+
+a:hover {
+	background-color:#006323;
+	color:white;
+}
+img {
+	border:0pt none;
+	margin:0pt;
+}
+a img, a:hover img {
+	background-color:white;
+	text-decoration:none;
+}
+a img.delete {
+	padding-top:0px;
+}
+.more {
+	font-size:10px;
+	margin-left:2px;
+}
+.clear {
+	clear:both;
+}
+.small {
+	font-size:10px;
+}
+.strong {
+	font-weight:bold;
+}
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.top {
+	vertical-align:top;
+}
+.notice {
+	background:#F8FCFA url(/images/admin/information.png) no-repeat scroll 15px 50%;
+	border-bottom:2px solid #B5FED4;
+	border-top:2px solid #B5FED4;
+	padding:5px 20px 5px 45px;
+	text-align:left;
+}
+.alert {
+	background:#FFBFF6 url(/images/admin/exclamation.png) no-repeat scroll 15px 50%;
+	border-bottom:2px solid #FF24D3;
+	border-top:2px solid #FF24D3;
+	padding:5px 20px 5px 45px;
+	text-align:left;
+}
+.helpsearch {
+	background:#F5F5F5 none repeat scroll 0% 0%;
+	border:1px solid #E7E7E7;
+	margin-bottom:20px;
+	padding:7px 10px 0pt 12px;
+}
+
+form {
+	padding:0pt 5px;
+}
+
+
+form [type="text"], form [type="password"] {
+	border:1px solid #999999;
+	font-size:12px;
+	margin:3px 0pt;
+	padding:3px 4px;
+}
+form textarea {
+	border:1px solid #999999;
+	width:100%;
+}
+select {
+	border:1px solid #999999;
+}
+form input.button, .button-to input {
+	background:transparent url(/images/admin/button.png) repeat scroll 0% 0%;
+	border:1px solid #006323;
+	color:#FFFFFF;
+	display:inline-block;
+	font-size:12px;
+	height:24px;
+	line-height:24px;
+	padding:0px 6px;
+	text-decoration:none;
+}
+form input.button:hover {
+	cursor:pointer;
+}
+form label {
+	color:#696968;
+	display:block;
+	font-size:12px;
+	font-weight:bold;
+	margin:0px;
+}
+span.help {
+	color:#555555;
+}
+.entryhelp {
+	color:#666666;
+	font-size:10px;
+}
+
+.left {
+	float:left;
+	margin-left:5px;
+	margin-right:20px;
+}
+
+#login form {
+	line-height:10px;
+}
+#login form [type="text"], #login form [type="password"] {
+	border:1px solid #999999;
+	margin:3px 0pt;
+	padding:3px 4px;
+	width:200px;
+}
+
+p.error {
+	background:transparent url(/images/admin/alert.png) no-repeat scroll 0% 0%;
+	color:#666666;
+	font-size:10px;
+	padding-left:15px;
+}
+
+
+
+#logo {
+	height:50px;
+	margin-top:20px;
+}
+#logo h1 a:hover {
+	background-color:white;
+}
+#navigation {
+	color:#777777;
+	text-align:right;
+}
+#navigation small {
+	color:#666666;
+	display:block;
+	font-size:11px;
+	margin-top:14px;
+}
+#navigation small a, #navigation small a:hover {
+	background-color:white;
+	color:#666666;
+}
+#navigation small a:hover {
+	background-color:#666666;
+	color:white;
+	text-decoration:none;
+}
+#nicemenuu {
+	background:transparent url(/images/admin/dots.gif) repeat-x scroll center bottom;
+	border:1px solid #999999;
+	display:inline;
+	font-size:14px;
+	height:50px;
+	margin-top:5px;
+}
+#nicemenuu ul {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0pt;
+	padding:0pt;
+}
+#nicemenuu ul li {
+	color:#006323;
+	float:left;
+	font-weight:bold;
+	margin-right:15px;
+	position:relative;
+}
+#nicemenu {
+	border-bottom:1px dotted #E5E5E5;
+	font-size:14px;
+}
+#nicemenu a {
+	color:#006323;
+	text-decoration:none;
+}
+#nicemenu a:hover {
+	background-color:white;
+	text-decoration:underline;
+}
+#nicemenu ul {
+	margin:2px 0pt;
+	padding:0pt;
+}
+#nicemenu li {
+	display:inline;
+	position:relative;
+}
+#nicemenu li span {
+	border-bottom:medium none;
+	line-height:18px;
+	padding:4px 4px 4px 6px;
+	position:relative;
+	z-index:10;
+}
+#nicemenu li span a {
+	font-weight:bold;
+	padding:0pt 6px 0px 2px;
+}
+#nicemenu li span.over {
+	border-color:#E5E5E5 rgb(153, 153, 153) rgb(255, 255, 255) rgb(229, 229, 229);
+	border-style:solid;
+	border-width:1px;
+	padding:4px 3px 4px 5px;
+}
+* + html #nicemenu li span.over {
+	border-top:2px solid #E5E5E5;
+	padding-bottom:3px;
+}
+#nicemenu li span.over a {
+}
+#nicemenu li span.over a:hover {
+	text-decoration:none;
+}
+#nicemenu li span.active {
+	border-color:#E5E5E5 rgb(153, 153, 153) rgb(255, 255, 255) rgb(229, 229, 229);
+	border-style:solid;
+	border-width:1px;
+	padding:4px 3px 4px 5px;
+}
+* + html #nicemenu li span.active {
+	border-top:2px solid #E5E5E5;
+	padding-bottom:3px;
+}
+#nicemenu li span.active a {
+}
+#nicemenu li span.active a:hover {
+	text-decoration:none;
+}
+#nicemenu img.arrow {
+	cursor:pointer;
+}
+#nicemenu div.sub_menu {
+	background:#FFFFFF none repeat scroll 0% 0%;
+	border-color:#E5E5E5 rgb(153, 153, 153) rgb(153, 153, 153) rgb(229, 229, 229);
+	border-style:solid;
+	border-width:1px;
+	display:none;
+	left:0pt;
+	margin-top:18px;
+	padding:4px;
+	position:absolute;
+	top:2px;
+	width:160px;
+}
+* html #nicemenu div.sub_menu {
+	margin-top:23px;
+}
+* + html #nicemenu div.sub_menu {
+	margin-top:23px;
+}
+#nicemenu div.sub_menu a:link, #nicemenu div.sub_menu a:visited, #nicemenu div.sub_menu a:hover {
+	background-color:white;
+	display:block;
+	font-size:11px;
+	padding:4px;
+}
+#nicemenu a.item_line {
+	border-top:1px solid #E5E5E5;
+	margin-top:3px;
+	padding-top:6px !important;
+}
+#content {
+	margin-top:10px;
+}
+
+
+#feed-info table {
+	margin:0pt;
+}
+
+
+td.avatar, #feed-info table td.avatar {
+	vertical-align:top;
+	width:55px;
+}
+
+#feed-info a.small-avatar img {
+	background:#FFFFFF none repeat scroll 0% 0%;
+	border:1px solid #CCCCCC;
+	float:left;
+	height:32px;
+	margin-bottom:4px;
+	margin-right:4px;
+	padding:1px;
+	width:32px;
+}
+
+#feed-info table td.user-status {
+	vertical-align:top;
+}
+
+td.feed-info {
+	vertical-align:top;
+}
+
+
+#feeds table {
+	border-collapse:collapse;
+	color:#999999;
+	margin:10px auto 0pt;
+	width:100%;
+}
+#feeds table tr {
+	margin-top: 10px;
+	height:85px;
+	margin-bottom: 10px;
+}
+#feeds table td a.feed-full-name {
+	font-size:12px;
+	text-decoration:none;
+}
+#feeds table tr td.feed-avatar {
+	text-align:center;
+	vertical-align:top;
+	width:60px;
+	padding-right: 30px;
+}
+#feeds table tr td.feed-info {
+	font-size:10px;
+	padding-top:0px;
+	vertical-align:top;
+}
+#feeds table tr td.feed-info span.feed-status {
+	background-color:#006323;
+	color:white;
+	font-style:italic;
+	padding-left:2px;
+	padding-right:4px;
+}
+#feeds table tr td.feed-options {
+	padding-top:10px;
+	text-align:right;
+	vertical-align:top;
+	width:150px;
+}
+#feeds table tr td.feed-options ul {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0pt;
+}
+
+#sidebar {
+	padding-left:10px;
+}
+#sidebar h1 {
+	font-size:20px;
+	margin-bottom:5px;
+	margin-top:10px;
+}
+#sidebar div.box h1 {
+	margin-bottom:0pt;
+}
+#sidebar div.box p {
+	color:#666666;
+	font-size:10px;
+	margin:0px;
+}
+#sidebar h2 {
+	font-size:18px;
+}
+#sidebar p.cite {
+	background-color:#CCCCCC;
+	display:block;
+	font-style:italic;
+}
+#sidebar .shortcuts {
+	text-align:right;
+}
+#sidebar table tr td.rounded {
+	background-image:url(/images/admin/rounded.png);
+	background-repeat:no-repeat;
+	border-bottom:1px solid white;
+	color:white;
+	font-size:10px;
+	height:15px;
+	text-align:center;
+	width:44px;
+}
+
+
+#pagination {
+	border:0pt none;
+	font-size:10px;
+	height:10px;
+	padding-top:10px;
+}
+#pagination li {
+	border:0pt none;
+	font-size:11px;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0pt;
+	padding:0pt;
+}
+#pagination a {
+	border:1px solid #DDDDDD;
+	margin-right:2px;
+}
+#pagination .disabled, #pagination .next-off {
+	color:#666666;
+	display:block;
+	float:left;
+	padding:3px 4px;
+}
+#pagination .current {
+	color:#006323;
+	display:block;
+	float:left;
+	font-weight:bold;
+	padding:4px 6px;
+}
+#pagination a:link, #pagination a:visited {
+	color:#006323;
+	display:block;
+	float:left;
+	padding:3px 6px;
+	text-decoration:none;
+}
+#pagination a:hover {
+	background-color:white;
+	border:1px solid #006323;
+}

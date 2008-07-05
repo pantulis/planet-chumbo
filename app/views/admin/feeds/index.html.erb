@@ -1,0 +1,47 @@
+<div id="content">
+	 <div id="feeds-list" class="grid_11">	
+		<div class="box">
+			<h2>Feeds</h2>
+		</div>
+		<div id="feeds">
+			<table>
+				<tbody>
+					<% @feeds.each do |list| %>
+					
+					<tr>
+						
+						<td class="feed-avatar">
+							<div class="avatar rheight25">
+								<img src="/images/default-avatar.jpg" width='50' height='50'>
+							</div>
+						</td>
+						<td class="feed-info">
+							<%= link_to list.name, '/', :class => 'feed-full-name' %>
+							<br />
+							URL del feed: <%= link_to list.feed_url, list.feed_url %>
+							<br />
+							Ultima actualización <%= list.updated_at %>
+							<br />
+							<%= list.feed_posts.length %> posts
+						</td>
+
+						
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+			
+			<div class="pagination">
+				<div id="pagination">
+					<%= will_paginate @feeds %>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="sidebar" class="grid_4 prefix_1">
+		
+	</div>
+</div>
+
+

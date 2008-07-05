@@ -1,0 +1,11 @@
+<div id="login-form">
+	<% form_tag session_path do -%>
+		<label for="email">Email<br/>
+		<%= text_field_tag 'email' %></label>
+		<br />
+		<label for="password">Password<br/>
+		<%= password_field_tag 'password' %></label>
+
+		<p><%= submit_tag 'Log in', :title => "Logging in..." %></p>
+	<% end -%>
+</div>
