@@ -1,0 +1,9 @@
+default:
+    id: 1
+    host: unusedfornow.com
+    title: Chumbo Planet
+    subtitle: A golden chumbo for everyone!
+    email: email@domain.com
+    current_theme_path: default
+    timezone: CET
+
