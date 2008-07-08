@@ -1,0 +1,12 @@
+<p>Aquí puedes configurar tu Planet.</p>
+
+<% form_for :planet, @planet, :url => admin_planet_path(@planet), :html => { :method => :put } do |form| %>
+	
+<p><label>Host:</label><%= form.text_field :host %></p>
+<p>	<label>Titulo:</label><%= form.text_field :title %></p>
+<p>	<label>Subtítulo:</label><%= form.text_field :subtitle %>	</p>
+<p>	<label>Correo de contacto:</label> <%= form.text_field :email %></p>
+<hr />
+<%= submit_tag 'Edit' %>
+
+<% end %>

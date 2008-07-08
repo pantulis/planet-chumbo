@@ -1,0 +1,13 @@
+<h3>Cambiar los datos del administrador</h3>
+
+<%= display_standard_flashes %>
+
+<% form_for :user, @user, :url => admin_user_path(@user), :html => { :method => :put } do |form| %>
+	
+<p> <label>Email:</label><%= form.text_field :email %></p>
+<p>	<label>Nueva clave:</label><%= form.password_field :password %></p>
+<p>	<label>Confirmación:</label><%= form.password_field :password_confirmation %>	</p>
+<hr />
+<%= submit_tag 'Edit' %>
+
+<% end %>

@@ -9,6 +9,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.namespace :admin do |admin|
     admin.resources :feeds
+    admin.resources :feed_posts
+    admin.resources :planets
+    admin.resources :users
   end
 
   map.resources :front_pages

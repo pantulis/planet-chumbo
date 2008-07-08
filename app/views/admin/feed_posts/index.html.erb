@@ -1,0 +1,48 @@
+<div id="content">
+	 <div id="feeds-list" class="grid_11">	
+		<div class="box">
+			<h2>Historias</h2>
+		</div>
+		<div id="posts">
+			<table>
+				<thead>
+					<tr>Nombre</tr>
+					<tr>Blog</tr>
+					<tr>Actualizado</tr>
+				</thead>
+				<tbody>
+					<% @feed_posts.each do |post| %>
+					
+					<tr>
+						
+						<td class="feed_posts-info">
+							<%= link_to post.title, post.permalink, :class => 'feed-full-name' %>
+						</td>
+						
+						<td>
+							<%= link_to post.feed.name, post.feed.feed_url %>
+						</td>
+						
+						<td>
+							<%= post.updated_at %>
+						</td>
+						
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+			
+			<div class="pagination">
+				<div id="pagination">
+					<%= will_paginate @feed_posts %>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="sidebar" class="grid_4 prefix_1">
+		
+	</div>
+</div>
+
+

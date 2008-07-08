@@ -15,11 +15,11 @@ submenu = e.findElement('li').down(3);
 if(submenu.getStyle('display')=='block'){
 headMenu.removeClassName("active");
 submenu.hide();
-this.writeAttribute('src','arrow_hover.png');
+this.writeAttribute('src','/images/admin/arrow_hover.png');
 } else {
 headMenu.addClassName("active");
 submenu.setStyle({'display': 'block'});
-this.writeAttribute('src','arrow_select.png');
+this.writeAttribute('src','/images/admin/arrow_select.png');
 }
 
 $$("div.sub_menu:visible").each(function(e){
@@ -30,7 +30,7 @@ if(e!=submenu){
 
 $$("#nicemenu img.arrow").each(function(e) {
 if(e != this){
-  e.writeAttribute('src','arrow.png');
+  e.writeAttribute('src','/images/admin/arrow.png');
 }
 });
 
@@ -44,15 +44,15 @@ if(e != headMenu){
 });
 
 $$("#nicemenu img.arrow").invoke("observe", "mouseover", function(e){
-this.writeAttribute('src','arrow_hover.png');
+this.writeAttribute('src','/images/admin/arrow_hover.png');
 });
 
 $$("#nicemenu img.arrow").invoke("observe", "mouseout", function(e){
 submenu = e.findElement('li').down(3);
 if(submenu.getStyle('display')!='block'){
- this.writeAttribute('src','arrow.png');
+ this.writeAttribute('src','/images/admin/arrow.png');
 } else {
- this.writeAttribute('src','arrow_select.png');
+ this.writeAttribute('src','/images/admin/arrow_select.png');
 }
 });
 
@@ -69,7 +69,7 @@ var elt = e.findElement('#nicemenu');
 if (elt == undefined){
  $$("#nicemenu span.head_menu").invoke('removeClassName','active');
  $$("#nicemenu div.sub_menu").invoke('hide');
- $$("#nicemenu img.arrow").invoke('writeAttribute','src','arrow.png');
+ $$("#nicemenu img.arrow").invoke('writeAttribute','src','/images/admin/arrow.png');
 }});
 
 });

@@ -5,15 +5,15 @@
 		</li>
 
 		<li>
-			<span class="head_menu"><a href="/shoes">Historias</a>
+			<span class="head_menu"><a href="/admin/feed_posts">Historias</a>
 		</li>
 		
 		<li><span class="head_menu"><a href="/account">Administración</a>
 			<img src="/images/admin/arrow.png" width="18" height="15" align="top" class="arrow" />
 			</span>
 			<div class="sub_menu">
-				<a href="/settings">Preferencias aplicación</a>
-				<a href="/userinfo">Cuenta</a>
+				<%= link_to 'Preferencias aplicación', edit_admin_planet_url(Planet.find(:first)) %>
+				<%= link_to 'Cuenta de usuario', edit_admin_user_url(current_user) %>
 			</div>
 		</li>
 	</ul>
