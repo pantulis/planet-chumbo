@@ -10,8 +10,8 @@ class CreateUsersTable < ActiveRecord::Migration
        t.datetime "created_at"
        t.datetime "updated_at"
        t.datetime "deleted_at"
-       t.string   "token"
-       t.datetime "token_expires_at"
+       t.string   "remember_token"
+       t.datetime "remember_token_expires_at"
        t.string   "filter"
        t.boolean  "admin",            :default => false
      end

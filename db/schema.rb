@@ -50,19 +50,19 @@ ActiveRecord::Schema.define(:version => 20080705111015) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login",            :limit => 40
-    t.string   "email",            :limit => 100
-    t.string   "crypted_password", :limit => 40
-    t.string   "salt",             :limit => 40
-    t.string   "activation_code",  :limit => 40
+    t.string   "login",                     :limit => 40
+    t.string   "email",                     :limit => 100
+    t.string   "crypted_password",          :limit => 40
+    t.string   "salt",                      :limit => 40
+    t.string   "activation_code",           :limit => 40
     t.datetime "activated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
-    t.string   "token"
-    t.datetime "token_expires_at"
+    t.string   "remember_token"
+    t.datetime "remember_token_expires_at"
     t.string   "filter"
-    t.boolean  "admin",                           :default => false
+    t.boolean  "admin",                                    :default => false
   end
 
 end
