@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20080705111015) do
     t.string   "name"
     t.string   "url"
     t.string   "feed_url"
+    t.string   "avatar_url"
     t.integer  "status"
     t.boolean  "published"
     t.datetime "created_at"

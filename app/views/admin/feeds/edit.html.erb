@@ -1,0 +1,36 @@
+<div id="content">
+	 <div id="feeds-list" class="grid_11">	
+		<div class="box">
+			<h2>Editing feed details</h2>
+		</div>
+		<div id="feeds">
+			
+			<% form_for(@feed, :feed, :url => admin_feed_url(@feed))  do |form| %>
+			  <label>Name</label>
+			  <%= form.text_field :name%>
+			  
+			  <br />
+			  <label>URL</label>
+			  <%= form.text_field :url%>
+			
+			  <br />
+			   <label>FeedURL</label>
+			  <%= form.text_field :feed_url%>
+
+			  <br />
+			  <label>Avatar URL</label>
+			  <%= form.text_field :avatar_url%>
+
+			<br />
+			<%= submit_tag 'Editar' %>
+			<% end %>
+			
+		</div>
+	</div>
+	
+	<div id="sidebar" class="grid_4 prefix_1">
+		
+	</div>
+</div>
+
+

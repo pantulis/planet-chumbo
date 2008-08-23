@@ -1,6 +1,12 @@
+<% if post.highlighted? %>
+<div class="post highlight">
+<% else %>
 <div class="post">
+<% end %>
 	<div class="metainfo">
 		<p>
+			<%= avatar_tag(post.feed) %>
+            <br />
 			Publicado en
 			<br />
 			<%= link_to post.feed.name, post.permalink %>

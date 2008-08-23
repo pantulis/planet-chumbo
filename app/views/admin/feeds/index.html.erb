@@ -6,25 +6,29 @@
 		<div id="feeds">
 			<table>
 				<tbody>
-					<% @feeds.each do |list| %>
+					<% @feeds.each do |feed| %>
 					
 					<tr>
 						
 						<td class="feed-avatar">
 							<div class="avatar rheight25">
-								<img src="/images/default-avatar.jpg" width='50' height='50'>
+								<%= avatar_tag(feed) %>
 							</div>
 						</td>
+						
 						<td class="feed-info">
-							<%= link_to list.name, '/', :class => 'feed-full-name' %>
+							<%= link_to feed.name, '/', :class => 'feed-full-name' %>
 							<br />
-							URL del feed: <%= link_to list.feed_url, list.feed_url %>
+							Feed URL: <%= link_to feed.feed_url, feed.feed_url %>
 							<br />
-							Ultima actualización <%= list.updated_at %>
+							Last updated at <%= feed.updated_at %>
 							<br />
-							<%= list.feed_posts.length %> posts
+							<%= feed.feed_posts.length %> posts
 						</td>
 
+						<td class="feed-info">
+							<%= link_to 'Edit', edit_admin_feed_url(feed)%>
+						</td>
 						
 					</tr>
 					<% end %>

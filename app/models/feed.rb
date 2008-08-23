@@ -8,7 +8,6 @@ class Feed < ActiveRecord::Base
   def parse
     return unless self.published? 
     
-    
     feed = FeedNormalizer::FeedNormalizer.parse open(self.feed_url)
     feed.clean!
     feed.entries.each do |entry|
@@ -29,4 +28,15 @@ class Feed < ActiveRecord::Base
     self.update_attributes(:published => false)
   end
 
+  def avatar_url
+    if self.read_attribute(:avatar_url).blank?
+      "/images/default-avatar.jpg"
+    else
+      self.read_attribute(:avatar_url)
+    end
+  end
+  
+  def highlighted?
+    !self.read_attribute(:avatar_url).blank?
+  end
 end

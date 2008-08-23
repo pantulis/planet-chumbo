@@ -2,13 +2,13 @@ class CreateFeeds < ActiveRecord::Migration
   def self.up
     create_table :feeds do |t|
       t.string :name
-      t.string :url
+      t.string :url      
       t.string :feed_url
+      t.string :avatar_url
       t.integer :status
       t.boolean :published
       t.datetime :created_at
       t.datetime :updated_at
-
       t.timestamps 
     end
   end

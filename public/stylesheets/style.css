@@ -119,7 +119,7 @@ padding:0pt;
 width:840px;
 }
 .header {
-background:#33AA00 url(images/bg_header.png) repeat-x scroll left top;
+background:#33AA00 repeat-x scroll left top;
 height:100px;
 margin:0pt;
 overflow:hidden;
@@ -203,7 +203,7 @@ padding:0pt 4px;
 color:#666666;
 float:left;
 font-size:12px;
-padding:3px 0pt;
+padding-left:25px;
 width:152px;
 }
 .metainfo a {
@@ -217,6 +217,8 @@ padding:0pt;
 .content {
 margin-left:177px;
 text-align:left;
+padding-left: 10px;
+padding-right: 10px;
 }
 .content h1 a, .content h2 a, .content h3 a {
 background-color:transparent;
@@ -363,4 +365,16 @@ padding:20px 0pt;
 #pagination .current {
 	font-weight: bold;
 	padding: 2px 5px;
+}
+
+.highlight {
+	background-image: url(/images/green-gradient.jpg);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	background-attachment: scroll;
+	border-width: 0.75px;
+	border-color: #309030;
+	border-style: solid;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }

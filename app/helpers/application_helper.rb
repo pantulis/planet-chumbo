@@ -26,4 +26,8 @@ module ApplicationHelper
      end.to_s << '</ul>'
      error_list
    end
+
+   def avatar_tag(feed)
+     image_tag(feed.avatar_url, :size => "48x48")
+   end
 end
