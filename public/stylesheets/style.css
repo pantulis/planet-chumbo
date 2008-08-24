@@ -164,6 +164,7 @@ border-top:1px solid #CCCCCC;
 padding:27px 0pt 7px;
 text-align:left;
 width:840px;
+min-height:100px;
 }
 .navigation {
 background:transparent url(images/bg_nav.png) no-repeat scroll right bottom;
