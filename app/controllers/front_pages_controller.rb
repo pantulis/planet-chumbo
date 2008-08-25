@@ -1,4 +1,7 @@
 class FrontPagesController < ApplicationController
+
+  session :disabled => true
+
   def index
     page = params[:page]
     @posts = FeedPost.paginate(
