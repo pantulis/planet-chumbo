@@ -23,7 +23,11 @@ namespace :chumbo do
     
     feeds.each do |feed|
       puts "Downloading and parsing #{feed.feed_url}"
-      feed.parse
+      begin
+        feed.parse
+      rescue
+	puts "Exception"
+      end  
     end
 
   end
