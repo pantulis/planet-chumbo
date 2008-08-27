@@ -4,7 +4,6 @@ class Feed < ActiveRecord::Base
 
   require 'feed-normalizer'
   
-  
   def parse
     return unless self.published? 
     
@@ -16,8 +15,11 @@ class Feed < ActiveRecord::Base
       post.body = entry.content
       post.authors = entry.authors.join(',')
       post.categories = entry.categories.join(',')
-      post.date_published = entry.date_published
-      
+
+      if post.new_record?
+        post.date_published = entry.date_published || Time.now
+      end
+
       post.save
       
       self.feed_posts << post
