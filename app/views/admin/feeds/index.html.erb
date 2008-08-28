@@ -1,51 +1,55 @@
 <div id="content">
-	 <div id="feeds-list" class="grid_11">	
-		<div class="box">
-			<h2>Feeds</h2>
-		</div>
-		<div id="feeds">
-			<table>
-				<tbody>
-					<% @feeds.each do |feed| %>
-					
-					<tr>
-						
-						<td class="feed-avatar">
-							<div class="avatar rheight25">
-								<%= avatar_tag(feed) %>
-							</div>
-						</td>
-						
-						<td class="feed-info">
-							<%= link_to feed.name, '/', :class => 'feed-full-name' %>
-							<br />
-							Feed URL: <%= link_to feed.feed_url, feed.feed_url %>
-							<br />
-							Last updated at <%= feed.updated_at %>
-							<br />
-							<%= feed.feed_posts.length %> posts
-						</td>
+  <div id="feeds-list" class="grid_11">	
+    <div class="box">
+      <h2>Feeds</h2>
+    </div>
+    <div id="feeds">
+      <table>
+	<tbody>
+	  <% @feeds.each do |feed| %>
+	  
+	  <tr>
+	    
+	    <td class="feed-avatar">
+	      <div class="avatar rheight25">
+		<%= avatar_tag(feed) %>
+	      </div>
+	    </td>
+	    
+	    <td class="feed-info">
+	      <%= link_to feed.name, '/', :class => 'feed-full-name' %>
+	      <br />
+	      Feed URL: <%= link_to feed.feed_url, feed.feed_url %>
+	      <br />
+	      Last updated at <%= feed.updated_at %>
+	      <br />
+	      <%= feed.feed_posts.length %> posts
+	    </td>
 
-						<td class="feed-info">
-							<%= link_to 'Edit', edit_admin_feed_url(feed)%>
-						</td>
-						
-					</tr>
-					<% end %>
-				</tbody>
-			</table>
-			
-			<div class="pagination">
-				<div id="pagination">
-					<%= will_paginate @feeds %>
-				</div>
-			</div>
-		</div>
+	    <td class="feed-info">
+	      <%= link_to 'Edit', edit_admin_feed_url(feed)%>
+	    </td>
+
+	    <td class="feed-info">
+	      <%= link_to 'Delete', admin_feed_url(feed), :method => :delete, :confirm => "Delete #{feed.name}?" %>
+	    </td>
+	    
+	  </tr>
+	  <% end %>
+	</tbody>
+      </table>
+      
+      <div class="pagination">
+	<div id="pagination">
+	  <%= will_paginate @feeds %>
 	</div>
-	
-	<div id="sidebar" class="grid_4 prefix_1">
-		
-	</div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="sidebar" class="grid_4 prefix_1">
+    
+  </div>
 </div>
 
 

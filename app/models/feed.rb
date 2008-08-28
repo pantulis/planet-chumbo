@@ -1,6 +1,6 @@
 class Feed < ActiveRecord::Base
 
-  has_many :feed_posts
+  has_many :feed_posts, :dependent => :destroy
 
   require 'feed-normalizer'
   
@@ -42,3 +42,4 @@ class Feed < ActiveRecord::Base
     !self.read_attribute(:avatar_url).blank?
   end
 end
+
