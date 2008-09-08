@@ -1,71 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head profile="http://gmpg.org/xfn/11">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Planeta Málaga</title>
-	<%= stylesheet_link_tag 'style', :media => 'screen' %>
-	
-        <link href="http://feeds.feedburner.com/planetamalaga" rel="alternate" title="ATOM" type="application/atom+xml" />
-  </head>
-  <body>
-    <div class="header">
-      <div class="top">
-        <div class="search">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- This template can be downloaded from www.openwebdesign.org. Just search for neuphoric -->
+<!-- This template has been modified by mejobloggs (http://www.openwebdesign.org/userinfo.phtml?user=mejobloggs) -->
+<!-- Please use this template according to the license on the original template (included as pleaseread.txt) -->
+<!-- The original of this template was designed by http://www.tristarwebdesign.co.uk - please visit for more templates & information - thank you. -->
 
-        </div>
-        <!-- .search -->
-        <h1>
-	<a href="/"><img src="/images/bg_h1.png"/><span>Planeta Málaga.  Bloguerones en la Red</span></a></h1>
-      </div>
-    </div>
+<head>
+	<title>Planeta Málaga</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
 
-    <!-- .header -->
-    <div class="container">
-	
-	<%= yield %>
- 
+<body id="altbody">
 
-    </div>  <!-- .container -->
+<div id="wrapper-header">
+	<div id="header">
+		<h1>Planeta Málaga</h1>
+	</div>
+</div>
 
-<% if false %>
-    <div class="footer">
-      <div class="bottom">
-        <div>
-          <p><strong>Acerca de...</strong></p>
-          <p>Planeta Málaga es el agregador de blogs escritos en Málaga o por malagueños en el mundo</p>
+<div id="wrapper-menu">
+	<div id="menu">
+		<ul>
+			<li><%= link_to 'Historias', '/' %></li>
+			<li><%= link_to 'Acerca de', page_path('about') %></li>
+			<li><%= link_to 'Contacto', page_path('contact') %></li>
+		</ul>
+	</div>
+</div>
 
-        </div>
-        <!-- acerca_de -->
+<div id="content">
 
-        <div>
-        </div>
+  <%= yield %>
 
-        <div>
+</div>
 
-        </div>
+<div id="footer">
+	original design by <a title="derby web design" href="http://www.tristarwebdesign.co.uk">tri-star web design</a>
+</div>
 
-        <div>
-        </div>
+<%= render :partial => 'shared/statcounter' %>
 
-        <div class="last">
-        </div>
-        <!-- twitter -->
-      </div>
-      <br clear="all" />
+</body>
 
-      <div class="copyright">
-
-                        <p>&copy; Planeta Málaga.</p>
-        
-<!-- End -->
-
-      </div>
-
-      <!-- .copyright -->
-    </div>
-    <!-- .footer -->
-<% end %>
-  </body>
 </html>
-
-

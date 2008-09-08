@@ -1,230 +1,139 @@
 body {
--x-system-font:none;
-font-family:'helvetica neue',arial,helvetica,clean,sans-serif;
-font-size:13px;
-font-size-adjust:none;
-font-stretch:normal;
-font-style:normal;
-font-variant:normal;
-font-weight:normal;
-line-height:normal;
+	margin: 0 0 1em 0;
+	padding: 0;
+	color: black;
+	background-color: #eee;
+	line-height: 130%;
+	font-family: arial, helvetica, verdana, tahoma, sans-serif;
+	text-align: center;
 }
-table {
-font-size:inherit;
+
+#wrapper-header {	background: #222; }
+
+#header {
+	background: #222 url('images/banner.jpg') right no-repeat;
+	width: 85%;
+	height: 125px;
+	line-height: 125px;
+	margin: 0 auto;
+	border-left: 1px solid #707070;
+	border-right: 1px solid #707070;
+	text-align: left;
 }
-select, input, textarea {
--x-system-font:none;
-font-family:arial,helvetica,clean,sans-serif;
-font-size:99%;
-font-size-adjust:none;
-font-stretch:normal;
-font-style:normal;
-font-variant:normal;
-font-weight:normal;
-line-height:normal;
+
+#header h1 {
+	margin: 0;
+	padding: 0;
+	color: #eee;
+	font-size: 220%;
+	padding-left: 10px;
+	letter-spacing: -1px;
 }
-pre, code {
--x-system-font:none;
-font-family:monospace;
-font-size:115%;
-font-size-adjust:none;
-font-stretch:normal;
-font-style:normal;
-font-variant:normal;
-font-weight:normal;
-line-height:normal;
+
+#wrapper-menu {
+	background: #88ac0b url('images/menu-background.png') top left repeat-x;
+	float: left;
+	width: 100%;
 }
-ul, ol {
-margin:1em 0pt;
-padding:0pt 0pt 0pt 1em;
+
+#menu {
+	width: 85%;
+	margin: 0 auto;
+	font-size: 95%;
+	white-space: nowrap; /* stops half a menu link dropping to next line. Instead, the whole link will drop. This only happens if you have a lot of menu links, and large text size */
+	padding-right: 2px;	/* The menu far left, and far right borders are not quite lining up in non IE browsers for some reason. This makes it less noticable */
 }
-ul li li, ol li li {
-font-size:1em;
+
+* html #menu { padding-right: 0; } /* See above comment. This re-adjusts IE to the above padding */
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	border-left: 1px solid #95bc0e;
+	border-right: 1px solid #95bf0f;
+	width: 100%;
 }
-img {
-border:0pt none;
+
+#menu li { display: inline; }
+
+#menu a:link, #menu a:visited {
+	padding: 0.25em 1em;
+	background: transparent;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	border-right: 1px solid #95bc0e;
 }
-table {
-border-collapse:collapse;
+
+#menu a:hover {
+	background: #b6e41c url('images/menu-hover.png') repeat-x;
+	color: #485b06;
 }
-.clearfix:after {
-clear:both;
-content:".";
-display:block;
-height:0pt;
-visibility:hidden;
+
+#content {
+	width: 83%; /* 93% because it has 1% padding on each side, which brings it to 95% wide */
+	margin: 0 auto;
+	padding: 3.5em 1% 20px 1%;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	background: white;
+	font-size: 90%;
+	text-align: left;
 }
-.clearfix {
-display:inline-block;
+
+* html #content { padding-top: 1.8em; } /* Set padding top in IE to 20px */
+
+#footer {
+	margin: 0 auto;
+	padding: 2px 1%;
+	width: 83%;
+	text-align: right;
+	color: white;
+	letter-spacing: 0.15em;
+	background: #88ac0b url('images/menu-background.png') top left repeat-x;
+	border: 1px solid #a0c80e;
+	font-size: 80%;
 }
-* html .clearfix {
-height:1%;
-}
-* {
-margin:0pt;
-padding:0pt;
-}
-body {
-background:#FFFFFF none repeat scroll 0% 0%;
-color:black;
-font-size:13px;
-line-height:18px;
-}
-a {
-color:#22CC22;
-text-decoration:none;
-}
-a:hover {
-text-decoration:none;
-}
-p, ul, ol, li {
-margin-bottom:18px;
-}
-blockquote {
-font-family:Georgia,serif;
-font-size:15px;
-font-style:italic;
-margin:0pt 18px 18px;
-}
-.content blockquote p {
-line-height:24px;
-margin:0pt;
-padding:0pt;
-}
-ul {
-list-style-type:square;
-margin-left:2em;
-}
-ol {
-margin-left:2em;
-}
-h1, h2, h3, h4, h5, h6 {
-color:#66FF00;
-}
-h1 {
-font-size:24px;
-margin-bottom:10px;
-}
+
 h2 {
-font-size:24px;
-margin-bottom:10px;
+	color: #666;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #a0c80e;
+	font-size: 150%;
+	letter-spacing: -1px;
 }
-h3 {
-font-size:20px;
-margin-bottom:10px;
+
+a:link, a:visited {
+	color: #260;
+	text-decoration: none;
 }
-.container {
-margin:0pt auto;
-padding:0pt;
-width:840px;
-}
-.header {
-background:#33AA00 repeat-x scroll left top;
-height:100px;
-margin:0pt;
-overflow:hidden;
-padding:0pt;
-}
-.header .top {
-margin:0pt auto;
-text-align:left;
-width:840px;
-}
-.header .top h1 {
-height:40px;
-margin-top:30px;
-width:500px;
-}
-.header .top span {
-display:none;
-}
-.header a {
-color:#33AA00;
-text-decoration:none;
-}
-.header a:hover {
-background-color:#33AA00;
-color:#FFFFFF;
-text-decoration:none;
-}
-.search {
-background:transparent url(/images/search.png) no-repeat scroll left center;
-float:right;
-margin:10px 0pt 0pt;
-padding:0pt 0pt 0pt 25px;
-}
-.search input {
-width:150px;
-}
-div.first-post {
-border-top:0pt none;
-}
-.post {
-border-top:1px solid #CCCCCC;
-padding:27px 0pt 7px;
-text-align:left;
-width:840px;
-min-height:100px;
-}
-.navigation {
-background:transparent url(/images/bg_nav.png) no-repeat scroll right bottom;
-border-top:1px solid #CCCCCC;
-margin:0pt;
-overflow:hidden;
-padding:22px 0pt 40px;
-}
-.navigation a:hover {
-text-decoration:underline;
-}
-.post a {
-background-color:#EEFFCC;
-}
+
 a:hover {
-background-color:#33AA00;
-color:#FFFFFF;
+	color: #000;
+	text-decoration: underline;
 }
-.post li {
-margin-bottom:0pt;
-}
-span.previous {
-float:left;
-}
-span.next {
-float:right;
-}
-span.edit a {
-border:1px solid #CCCCCC;
-color:#666666;
-float:right;
-font-size:11px;
-font-weight:normal;
-padding:0pt 4px;
-}
+
+p { margin-left: 1em; }
+
 .metainfo {
-color:#666666;
-float:left;
-font-size:12px;
-padding-left:25px;
-width:152px;
+    float: left;
+    width: 152px;
+    padding-left: 25px;
+    font-size: 12px;
+    
 }
-.metainfo a {
-background-color:transparent;
-color:#33AA00;
-}
-.metainfo ul, .metainfo ol {
-margin:0pt 0pt 0pt 15px;
-padding:0pt;
-}
+
 .content {
-margin-left:177px;
-text-align:left;
-padding-left: 10px;
-padding-right: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 177px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-.content h1 a, .content h2 a, .content h3 a {
-background-color:transparent;
-color:#33AA00;
-}
+
 .content h1 a:hover, .content h2 a:hover, .content h3 a:hover {
 background-color:#33AA00;
 color:#FFFFFF;
@@ -248,126 +157,22 @@ padding:1em 2em;
 .content img, .content object {
 max-width:600px;
 }
-.text_area {
-width:480px !important;
-}
-.postform {
-margin:0pt;
-width:150px;
-}
-.delicious-tags {
-color:#666666;
-font-size:11px;
-}
-.delicious-tags a {
-color:#333333;
-font-weight:normal;
-}
-.footer {
-background:#33AA00 epeat-x scroll left top;
-color:#7D2B00;
-margin:0pt;
-overflow:hidden;
-padding:0pt;
-}
-.footer .bottom {
-font-size:12px;
-margin:0pt auto;
-padding:22px 0pt 10px 5px;
+
+
+.post {
+margin-top: 1em;
+margin-bottom: 1em;
 text-align:left;
-width:840px;
-}
-.footer .bottom div {
-float:left;
-margin:0pt 20px 0pt 0pt;
-width:152px;
-}
-.footer a {
-color:#FFFFFF;
-}
-.footer img {
-border:0pt none;
-}
-.footer div.last {
-margin:0pt;
-width:142px;
-}
-.footer ul, .footer ol {
-margin:0pt 0pt 0pt 15px;
-padding:0pt;
+min-height:150px;
 }
 
-ul.nav li {
-margin:0pt;
-}
-pre code {
-background-color:#111111;
-color:#00CC00;
-display:block;
-font-family:Consolas,Monaco,fixed;
-font-size:14px;
-margin-bottom:1em;
-overflow:auto;
-padding:1em;
-}
-#comments {
-border-top:1px solid #CCCCCC;
-padding:20px 0pt;
-text-align:left;
-}
-#comments h3 {
-margin:0pt;
-padding:0pt;
-}
-.comment {
-border-top:1px solid #CCCCCC;
-overflow:hidden;
-padding:20px 0pt;
-text-align:left;
-}
-.category-title {
-border-bottom:1px solid #CCCCCC;
-padding:20px 0pt;
-}
-.category-title h2 {
-margin:0pt;
-padding:0pt;
-}
-.commentform {
-border-top:1px solid #CCCCCC;
-padding:20px 0pt;
-}
-
-#pagination {
-	float: right;
-	margin: 10px 0pt;
-}
-#pagination .disabled {
-	display: none;
-}
-#pagination a {
-	border: 1px solic #c7c7c7;
-	padding: 2px 5px;
-	text-decoration: none;
-}
-
-#pagination a:hover {
-	background-color: #e51066;
-	color: #fff;
-}
-#pagination .current {
-	font-weight: bold;
-	padding: 2px 5px;
-}
 
 .highlight {
-	background-image: url(/images/green-gradient.jpg);
-	background-repeat: repeat-x;
-	background-position: 0 0;
-	background-attachment: scroll;
-	border-width: 0.75px;
-	border-color: #309030;
-	border-style: solid;
-	margin-top: 10px;
-	margin-bottom: 10px;
+  background-image: url(/images/green-gradient.jpg);
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  background-attachment: scroll;
+  border-width: 0.75px;
+  border-color: #309030;
+  border-style: solid;
 }

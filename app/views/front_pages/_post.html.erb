@@ -9,10 +9,10 @@
             <br />
 			Publicado en
 			<br />
-			<% if post.permalink? %>
+			<% if post.feed.url %>
+			<%= link_to post.feed.name, post.feed.url %>
+			<% elsif post.permalink %>
 			<%= link_to post.feed.name, post.permalink %>
-			<% else %>
-			<%= post.feed.name %>
 			<% end %>
 			<br />
 			<%= post.date_published.strftime("%d-%m-%Y %H:%M") %>

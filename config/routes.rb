@@ -19,5 +19,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :feeds
 
   map.root :controller => "front_pages", :action => 'index'
-
+  
+  map.page ':page', :controller => "pages", :action => 'show', :page => /about|contact/
 end
