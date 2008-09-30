@@ -34,7 +34,15 @@
 	    <td class="feed-info">
 	      <%= link_to 'Delete', admin_feed_url(feed), :method => :delete, :confirm => "Delete #{feed.name}?" %>
 	    </td>
-	    
+	
+	    <td>
+		  <% if feed.published? %> 
+		     Published
+		  <% else %> 
+		     Banned
+		  <% end %>
+		</td>
+	
 	  </tr>
 	  <% end %>
 	</tbody>
