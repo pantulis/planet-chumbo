@@ -1,7 +1,9 @@
 class Feed < ActiveRecord::Base
 
   has_many :feed_posts, :dependent => :destroy
-
+  named_scope :published, :conditions => { :published => true }
+  named_scope :banned, :conditions => { :published => false }
+  
   require 'feed-normalizer'
   
   def parse

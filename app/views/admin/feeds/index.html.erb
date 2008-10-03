@@ -1,7 +1,10 @@
 <div id="content">
   <div id="feeds-list" class="grid_11">	
     <div class="box">
-      <h2>Feeds</h2 > <%= link_to 'New feed', new_admin_feed_url %>
+	
+      <h2><%= @listing_title || "Feeds » all" %></h2 >
+	
+	 <%= @collection.total_entries %> feeds | <%= link_to 'New feed', new_admin_feed_url %>
     </div>
 
     <div id="feeds">
@@ -35,7 +38,7 @@
 	      <%= link_to 'Delete', admin_feed_url(feed), :method => :delete, :confirm => "Delete #{feed.name}?" %>
 	    </td>
 	
-	    <td>
+	    <td class="feed-info">
 		  <% if feed.published? %> 
 		     Published
 		  <% else %> 
