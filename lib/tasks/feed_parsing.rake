@@ -26,7 +26,7 @@ namespace :chumbo do
       begin
         feed.parse
       rescue
-	puts "Exception"
+	      puts "Exception"
       end  
     end
 

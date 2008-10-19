@@ -29,7 +29,7 @@ class Feed < ActiveRecord::Base
     self.update_attributes(:name => feed.title, :updated_at => Time.now)
   rescue
     logger.debug("Error parseando #{self.feed_url}, lo inhabilitamos")
-    self.update_attributes(:published => false)
+    self.update_attributes(:failing => false)
   end
 
   def avatar_url
